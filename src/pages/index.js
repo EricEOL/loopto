@@ -48,8 +48,8 @@ export const getServerSideProps = async () => {
     .then(data => data);
 
   const ripple = {
-    brl_price: parseFloat(rippleData.market_data.current_price.brl.toFixed(2)),
-    usd_price: parseFloat(rippleData.market_data.current_price.usd.toFixed(2)),
+    brl_price: parseFloat(rippleData.market_data.current_price.brl.toFixed(3)),
+    usd_price: parseFloat(rippleData.market_data.current_price.usd.toFixed(3)),
     last_24hours: parseFloat(rippleData.market_data.price_change_percentage_24h.toFixed(2)),
     image: rippleData.image.small
   }
@@ -59,8 +59,8 @@ export const getServerSideProps = async () => {
     .then(data => data);
 
   const tether = {
-    brl_price: parseFloat(tetherData.market_data.current_price.brl.toFixed(2)),
-    usd_price: parseFloat(tetherData.market_data.current_price.usd.toFixed(2)),
+    brl_price: parseFloat(tetherData.market_data.current_price.brl.toFixed(3)),
+    usd_price: parseFloat(tetherData.market_data.current_price.usd.toFixed(3)),
     last_24hours: parseFloat(tetherData.market_data.price_change_percentage_24h.toFixed(2)),
     image: tetherData.image.small
   }
