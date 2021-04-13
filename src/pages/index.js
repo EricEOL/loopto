@@ -8,7 +8,7 @@ export default function Home({ ripple, tether, rippleDates, ripplePrices, tether
   return (
     <>
       <Head>
-        <title>Loopto</title>
+        <title>Loopto - Home</title>
       </Head>
 
       <main className={styles.container}>

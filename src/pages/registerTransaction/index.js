@@ -1,8 +1,9 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 
 export default function RegisterTransaction() {
-   
+
     const [cryptocurrency, setCryptocurrency] = useState('');
     const [date, setDate] = useState('');
     const [price, setPrice] = useState('');
@@ -14,7 +15,7 @@ export default function RegisterTransaction() {
     function handleSubmit(event) {
 
         event.preventDefault();
-        
+
         const data = {
             cryptocurrency,
             date,
@@ -37,28 +38,34 @@ export default function RegisterTransaction() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className={styles.formTransaction}>
-            <h2>Nova transação</h2>
-            <p>
-                <label>Criptomoeda</label>
-                <input type="text" onChange={(e)=>setCryptocurrency(e.target.value)}/>
-            </p>
-            <p>
-                <label>Data</label>
-                <input type="date" onChange={(e)=>setDate(e.target.value)}/>
-            </p>
-            <p>
-                <label>Preço</label>
-                <input type="float" onChange={(e)=>setPrice(e.target.value)}/>
-            </p>
-            <p>
-                <label>Quantidade</label>
-                <input type="float" onChange={(e)=>setAmount(e.target.value)}/>
-            </p>
-            <button type="submit">Inserir</button>
+        <>
+            <Head>
+                <title>Loopto - Nova transação</title>
+            </Head>
 
-            {error && <span>{error}</span>}
-            {sendingOk && <span>{sendingOk}</span>}
-        </form>
+            <form onSubmit={handleSubmit} className={styles.formTransaction}>
+                <h2>Nova transação</h2>
+                <p>
+                    <label>Criptomoeda</label>
+                    <input type="text" onChange={(e) => setCryptocurrency(e.target.value)} />
+                </p>
+                <p>
+                    <label>Data</label>
+                    <input type="date" onChange={(e) => setDate(e.target.value)} />
+                </p>
+                <p>
+                    <label>Preço</label>
+                    <input type="float" onChange={(e) => setPrice(e.target.value)} />
+                </p>
+                <p>
+                    <label>Quantidade</label>
+                    <input type="float" onChange={(e) => setAmount(e.target.value)} />
+                </p>
+                <button type="submit">Inserir</button>
+
+                {error && <span>{error}</span>}
+                {sendingOk && <span>{sendingOk}</span>}
+            </form>
+        </>
     )
 }
