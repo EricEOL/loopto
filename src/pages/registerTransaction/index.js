@@ -29,10 +29,10 @@ export default function RegisterTransaction() {
                 body: JSON.stringify(data),
             })
 
-            setSendingOk('Compra inserida')
+            setSendingOk('Compra inserida!')
             setError('');
         } catch (error) {
-            setError('Não foi possível inserir essa transação');
+            setError('Não foi possível inserir essa transação.');
             setSendingOk('')
         }
     }
@@ -63,8 +63,8 @@ export default function RegisterTransaction() {
                 </p>
                 <button type="submit">Inserir</button>
 
-                {error && <span>{error}</span>}
-                {sendingOk && <span>{sendingOk}</span>}
+                {error && <span className={styles.error}>{error}</span>}
+                {sendingOk && <span className={styles.sendingOk}>{sendingOk}</span>}
             </form>
         </>
     )

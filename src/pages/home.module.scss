@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 728px) {
+        max-width: 100vw;
+    }
 }
 
 .card {
@@ -17,9 +21,20 @@
     display: flex;
     align-items: center;
 
+    @media(max-width: 728px) {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
     .cardData {
         width: 400px;
-        margin-right: 5rem;        
+        margin-right: 5rem;
+        
+        @media(max-width: 728px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 5rem;
+        }    
     }
 
     img {
