@@ -1,0 +1,81 @@
+.formTransaction {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 2rem;  
+    border-radius: 1rem;
+
+    margin-top: 30px;
+    max-width: 400px;
+    background: var(--gray-900);
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        label {
+            text-align: center;
+            display: block;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input {
+            outline: none;
+            width: 200px;
+            height: 30px;
+            margin-top: 8px;
+            border: 2px solid transparent;
+            border-radius: 0.25rem;
+            text-align: center;
+            color: var(--blue-800);
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: border 0.2s;
+
+            &.test {
+                border: 5px solid red;
+            }
+
+            &:focus {
+                border: 2px solid var(--blue-500);
+            }
+        }
+
+    }
+
+    button {
+        width: 200px;
+        height: 30px;
+        border: none;
+        border-radius: 0.25rem;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: var(--blue-500);
+        outline: none;
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+}
