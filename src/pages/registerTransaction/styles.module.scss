@@ -80,12 +80,23 @@
         &:hover {
             filter: brightness(0.8);
         }
+
+        @media(max-width: 728px) {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            margin-left: -50px;
+        }
     }
 
     span {
         position: absolute;
         bottom: 10px;
         font-size: 14px;
+
+        @media(max-width: 728px) {
+            bottom: -80px;
+        }
 
         &.error {
             color: coral;
