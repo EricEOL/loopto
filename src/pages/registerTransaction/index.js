@@ -16,6 +16,12 @@ export default function RegisterTransaction() {
 
         event.preventDefault();
 
+        if(!cryptocurrency || !date || !price || !amount) {
+            setSendingOk('');
+            setError('Existem campos vazios.');
+            return;
+        }
+
         const data = {
             cryptocurrency,
             date,
